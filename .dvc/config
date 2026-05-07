@@ -1,7 +1,4 @@
 [core]
     remote = myremote
-[cache]
-    dir = /home/nguyenhieu/.dvc-cache
 ['remote "myremote"']
     url = gs://my-ml-project-lab21/dvc
-    credentialpath = ../sa-key.json
