@@ -72,6 +72,8 @@ jobs:
           echo "accuracy=$ACC" >> $GITHUB_OUTPUT
 
       - name: Upload model to Cloud Storage
+        env:
+          CLOUD_BUCKET: my-ml-project-lab21
         run: |
           python - <<'EOF'
           import os
