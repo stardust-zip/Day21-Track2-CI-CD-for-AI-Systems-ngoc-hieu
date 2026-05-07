@@ -1,4 +1,16 @@
-with import <nixpkgs> { };
+{
+  pkgs ? import <nixpkgs> { },
+}:
+
+let
+  inherit (pkgs) lib stdenv zlib;
+  gcloud = pkgs.google-cloud-sdk.withExtraComponents (
+    with pkgs.google-cloud-sdk.components;
+    [
+      gke-gcloud-auth-plugin
+    ]
+  );
+in
 pkgs.mkShell {
   name = "lab21";
 
@@ -27,6 +39,10 @@ pkgs.mkShell {
     gcc
     gnumake
     # ---------------------------------------------
+
+    gcloud
+    dvc
+    python312Packages.dvc-gs
   ];
 
   shellHook = ''

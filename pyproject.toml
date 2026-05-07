@@ -34,6 +34,8 @@ dependencies = [
     "pyarrow>=17.0.0",
     "numpy>=2.0.0",
     "certifi>=2024.0.0",
+    "dvc-gs>=3.0.2",
+    "orjson>=3.11.9",
 ]
 
 [dependency-groups]
