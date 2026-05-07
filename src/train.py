@@ -14,7 +14,7 @@ EVAL_THRESHOLD = 0.70
 
 def train(
     params: dict,
-    data_path: str = "data/train_phase1.csv",
+    data_path: str = "data/train_phase2.csv",
     eval_path: str = "data/eval.csv",
 ) -> float:
     """
